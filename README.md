@@ -20,4 +20,8 @@ Site hospedado em: (https://visionary-platypus-2c9193.netlify.app/)
 Aproximadamente 3 horas
 
 ## Desenvolvido por
+<<<<<<< HEAD
 Andreyna Vieira
+=======
+Andreyna Vieira
+>>>>>>> add87baee6b4fd7937d70676ffff6eff36ae0a82
