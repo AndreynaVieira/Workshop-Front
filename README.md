@@ -8,7 +8,6 @@ Site hospedado em: [bookshelf](https://teal-alpaca-efa7ea.netlify.app/)
 ## Tecnologias utilizadas
 - HTML5
 - CSS3  
-- JavaScript Vanilla
 
 ## Funcionalidades
 - Catálogo de livros
