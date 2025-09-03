@@ -4,220 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookShelf - Livraria Online</title>
-    <style>
-        * {
-            margin: 0;
-<<<<<<< HEAD
-            
-=======
->>>>>>> add87baee6b4fd7937d70676ffff6eff36ae0a82
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #333;
-        }
-
-        /* header básico */
-        header {
-            background: #8b4513;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* seção principal */
-        .hero {
-            background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.8)), #ddd;
-            color: white;
-            text-align: center;
-            padding: 4rem 1rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            background: #ffd700;
-            color: #333;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: #ffed4e;
-        }
-
-        /* container principal */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        /* grid de livros simples */
-        .books-section {
-            margin: 3rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #8b4513;
-        }
-
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .book-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-left: 4px solid #8b4513;
-        }
-
-        .book-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
-
-        .book-title {
-            font-size: 1.3rem;
-            color: #8b4513;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .book-author {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-
-        .book-price {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #d2691e;
-            margin-top: 1rem;
-        }
-
-        /* filtros simples */
-        .filters {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .filter-btn {
-            background: #e0e0e0;
-            border: none;
-            padding: 8px 16px;
-            margin: 0 5px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #8b4513;
-            color: white;
-        }
-
-        /* ranking simples */
-        .ranking {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
-
-        .ranking-item {
-            display: flex;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .rank-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #8b4513;
-            width: 50px;
-        }
-
-        .rank-info {
-            flex: 1;
-            margin-left: 1rem;
-        }
-
-        .rank-title {
-            font-weight: bold;
-            margin-bottom: 0.2rem;
-        }
-
-        .rank-author {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* footer básico */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-        }
-
-        /* responsivo básico */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .books-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -239,27 +26,123 @@
     </section>
 
     <div class="container">
-        <!-- filtros simples -->
+        <!-- filtros simples (apenas visual) -->
         <div class="filters">
-            <button class="filter-btn active" onclick="filterBooks('all')">Todos</button>
-            <button class="filter-btn" onclick="filterBooks('ficcao')">Ficção</button>
-            <button class="filter-btn" onclick="filterBooks('autoajuda')">Autoajuda</button>
-            <button class="filter-btn" onclick="filterBooks('biografia')">Biografias</button>
+            <button class="filter-btn active">Todos</button>
+            <button class="filter-btn">Ficção</button>
+            <button class="filter-btn">Autoajuda</button>
+            <button class="filter-btn">Biografias</button>
         </div>
 
         <!-- seção de livros -->
         <section class="books-section" id="livros">
             <h2 class="section-title">Nossos Livros</h2>
-            <div class="books-grid" id="booksGrid">
-                <!-- livros serão inseridos aqui pelo JavaScript -->
+            <div class="books-grid">
+                
+                <div class="book-card">
+                    <h3 class="book-title">O Alquimista</h3>
+                    <p class="book-author">Paulo Coelho</p>
+                    <p>Uma jornada sobre seguir seus sonhos e descobrir o verdadeiro tesouro da vida.</p>
+                    <p class="book-price">R$ 29,90</p>
+                </div>
+
+                <div class="book-card">
+                    <h3 class="book-title">1984</h3>
+                    <p class="book-author">George Orwell</p>
+                    <p>Clássico distópico que nunca perde sua relevância sobre liberdade e controle social.</p>
+                    <p class="book-price">R$ 34,90</p>
+                </div>
+
+                <div class="book-card">
+                    <h3 class="book-title">Sapiens</h3>
+                    <p class="book-author">Yuval Noah Harari</p>
+                    <p>História fascinante da humanidade desde os primórdios até os dias atuais.</p>
+                    <p class="book-price">R$ 42,90</p>
+                </div>
+
+                <div class="book-card">
+                    <h3 class="book-title">Mindset</h3>
+                    <p class="book-author">Carol S. Dweck</p>
+                    <p>Desenvolva a mentalidade de crescimento para alcançar o sucesso.</p>
+                    <p class="book-price">R$ 44,90</p>
+                </div>
+
+                <div class="book-card">
+                    <h3 class="book-title">Steve Jobs</h3>
+                    <p class="book-author">Walter Isaacson</p>
+                    <p>A biografia definitiva do visionário que mudou o mundo da tecnologia.</p>
+                    <p class="book-price">R$ 52,90</p>
+                </div>
+
+                <div class="book-card">
+                    <h3 class="book-title">Atomic Habits</h3>
+                    <p class="book-author">James Clear</p>
+                    <p>Pequenas mudanças que fazem uma grande diferença na construção de bons hábitos.</p>
+                    <p class="book-price">R$ 47,90</p>
+                </div>
+
+                <div class="book-card">
+                    <h3 class="book-title">A Coragem de Ser Imperfeito</h3>
+                    <p class="book-author">Brené Brown</p>
+                    <p>Descobrindo o poder da vulnerabilidade para uma vida mais autêntica e plena.</p>
+                    <p class="book-price">R$ 39,90</p>
+                </div>
+
+                <div class="book-card">
+                    <h3 class="book-title">O Poder do Agora</h3>
+                    <p class="book-author">Eckhart Tolle</p>
+                    <p>Um guia transformador para viver plenamente o momento presente.</p>
+                    <p class="book-price">R$ 36,90</p>
+                </div>
+
             </div>
         </section>
 
         <!-- ranking simples -->
         <section id="ranking">
             <h2 class="section-title">Mais Vendidos</h2>
-            <div class="ranking" id="rankingList">
-                <!-- ranking será inserido aqui -->
+            <div class="ranking">
+                
+                <div class="ranking-item">
+                    <div class="rank-number">1</div>
+                    <div class="rank-info">
+                        <div class="rank-title">O Alquimista</div>
+                        <div class="rank-author">Paulo Coelho</div>
+                    </div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="rank-number">2</div>
+                    <div class="rank-info">
+                        <div class="rank-title">1984</div>
+                        <div class="rank-author">George Orwell</div>
+                    </div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="rank-number">3</div>
+                    <div class="rank-info">
+                        <div class="rank-title">Sapiens</div>
+                        <div class="rank-author">Yuval Noah Harari</div>
+                    </div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="rank-number">4</div>
+                    <div class="rank-info">
+                        <div class="rank-title">Mindset</div>
+                        <div class="rank-author">Carol S. Dweck</div>
+                    </div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="rank-number">5</div>
+                    <div class="rank-info">
+                        <div class="rank-title">Steve Jobs</div>
+                        <div class="rank-author">Walter Isaacson</div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </div>
@@ -268,126 +151,5 @@
         <p>&copy; 2024 BookShelf. Todos os direitos reservados.</p>
         <p>Contato: contato@bookshelf.com | (11) 9999-9999</p>
     </footer>
-
-    <script>
-        // lista básica de livros
-        const livros = [
-            {
-                titulo: "O Alquimista",
-                autor: "Paulo Coelho",
-                categoria: "ficcao",
-                preco: "R$ 29,90",
-                descricao: "Uma jornada sobre seguir seus sonhos."
-            },
-            {
-                titulo: "1984",
-                autor: "George Orwell", 
-                categoria: "ficcao",
-                preco: "R$ 34,90",
-                descricao: "Clássico distópico sobre controle social."
-            },
-            {
-                titulo: "Sapiens",
-                autor: "Yuval Noah Harari",
-                categoria: "historia",
-                preco: "R$ 42,90", 
-                descricao: "História fascinante da humanidade."
-            },
-            {
-                titulo: "Mindset",
-                autor: "Carol S. Dweck",
-                categoria: "autoajuda",
-                preco: "R$ 44,90",
-                descricao: "Desenvolva mentalidade de crescimento."
-            },
-            {
-                titulo: "Steve Jobs", 
-                autor: "Walter Isaacson",
-                categoria: "biografia",
-                preco: "R$ 52,90",
-                descricao: "Biografia do visionário da Apple."
-            },
-            {
-                titulo: "Atomic Habits",
-                autor: "James Clear",
-                categoria: "autoajuda", 
-                preco: "R$ 47,90",
-                descricao: "Como construir bons hábitos."
-            }
-        ];
-
-        // função para mostrar livros
-        function mostrarLivros(lista) {
-            const grid = document.getElementById('booksGrid');
-            grid.innerHTML = '';
-            
-            lista.forEach(livro => {
-                const card = document.createElement('div');
-                card.className = 'book-card';
-                card.innerHTML = `
-                    <h3 class="book-title">${livro.titulo}</h3>
-                    <p class="book-author">${livro.autor}</p>
-                    <p>${livro.descricao}</p>
-                    <p class="book-price">${livro.preco}</p>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        // filtrar por categoria
-        function filterBooks(categoria) {
-            // remove active de todos os botões
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // adiciona active no botão clicado
-            event.target.classList.add('active');
-            
-            // filtra livros
-            if (categoria === 'all') {
-                mostrarLivros(livros);
-            } else {
-                const filtrados = livros.filter(livro => livro.categoria === categoria);
-                mostrarLivros(filtrados);
-            }
-        }
-
-        // criar ranking
-        function criarRanking() {
-            const ranking = document.getElementById('rankingList');
-            
-            // pega os primeiros 5 livros como "mais vendidos"
-            livros.slice(0, 5).forEach((livro, index) => {
-                const item = document.createElement('div');
-                item.className = 'ranking-item';
-                item.innerHTML = `
-                    <div class="rank-number">${index + 1}</div>
-                    <div class="rank-info">
-                        <div class="rank-title">${livro.titulo}</div>
-                        <div class="rank-author">${livro.autor}</div>
-                    </div>
-                `;
-                ranking.appendChild(item);
-            });
-        }
-
-        // inicializar página
-        document.addEventListener('DOMContentLoaded', function() {
-            mostrarLivros(livros);
-            criarRanking();
-            
-            // scroll suave
-            document.querySelectorAll('a[href^="#"]').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
