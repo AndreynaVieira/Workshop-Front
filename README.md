@@ -3,7 +3,7 @@
 Site simples de uma livraria com sistema de filtros e ranking de livros.
 
 ## Como acessar
-Site hospedado em: (https://visionary-platypus-2c9193.netlify.app/)
+Site hospedado em: [bookshelf](https://teal-alpaca-efa7ea.netlify.app/)
 
 ## Tecnologias utilizadas
 - HTML5
